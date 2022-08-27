@@ -1,0 +1,40 @@
+@keyframes menu_sticky {
+    0% {
+        margin-top: -120px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: -64px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hide_dropdown_menu {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+@keyframes show_dropdown_menu {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

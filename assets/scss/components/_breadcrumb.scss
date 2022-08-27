@@ -1,0 +1,44 @@
+.navbar.head-nav {
+  background-color: transparent;
+  border-radius: rem(2);
+  box-shadow: none;
+  border-radius: 1px;
+  margin-bottom: rem(24);
+  padding: 0;
+
+  .breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: none;
+    .breadcrumb-item {
+      font-size: rem(20);
+      line-height: rem(24);
+      font-weight: $fontRegular;
+      color: $green-3B;
+      text-transform: capitalize;
+      display: flex;
+      img {
+        height: rem(24);
+        width: rem(24);
+      }
+      a {
+        font-weight: $fontSemiBold;
+        color: $green-0;
+      }
+
+      & + .breadcrumb-item {
+        padding: 0;
+        padding-#{$left}: rem(10);
+
+        &::before {
+          content: url(#{$imgPath}/icons/navigate_next.svg);
+          padding-right: rem(10);
+          padding-left: rem(0);
+          @if ($mainSiteLang==ar) {
+            transform: scaleX(-1);
+          }
+        }
+      }
+    }
+  }
+}

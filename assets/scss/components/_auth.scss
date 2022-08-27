@@ -1,0 +1,198 @@
+.userAuth_page {
+    .right-side {
+        background-color: rgba($green-49, 0.45);
+        height: 100vh;
+        padding: rem(16) rem(55);
+        padding-bottom: 0;
+        @media (max-width: 768px) {
+            order: 1;
+            height: auto;
+        }
+        .side_inner_auth {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .head_auth {
+                .logo_auth {
+                    height: rem(69);
+                    width: rem(76);
+                    margin-bottom: rem(18);
+                    display: block;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .title_auth {
+                    font-size: rem(24);
+                    line-height: rem(28);
+                    font-weight: $fontBold;
+                    margin-bottom: rem(11);
+                    color: $green-0;
+                }
+            }
+            .img-pref {
+                max-height: rem(602);
+                width: rem(532);
+                max-width: 100%;
+                margin: 0 auto;
+                @media (max-width: 768px) {
+                    max-height: rem(390);
+                }
+            }
+        }
+    }
+    .left-side {
+        @media (max-width: 768px) {
+            order: 2;
+        }
+
+        form {
+            padding: 0 rem(15);
+        }
+
+        .btn {
+            margin-top: rem(16);
+        }
+
+        .title_left_side {
+            font-size: rem(41);
+            line-height: rem(48);
+            font-weight: $fontRegular;
+            color: $green-0;
+            text-align: center;
+            margin-bottom: rem(72);
+            margin-top: rem(18);
+            @media (max-width: 768px) {
+                font-size: rem(34);
+                line-height: rem(40);
+                margin-bottom: rem(17);
+            }
+        }
+
+        .hint_left_side {
+            font-size: rem(24);
+            line-height: rem(28);
+            font-weight: $fontRegular;
+            color: $grey-6;
+            text-align: center;
+            margin-bottom: rem(27);
+            margin-top: rem(25);
+            a {
+                color: $green-0;
+                margin-#{$left}: rem(18);
+            }
+        }
+    }
+    &.login-page {
+        .right-side {
+            .side_inner_auth {
+                .img-pref {
+                    max-height: rem(487);
+                    width: rem(542);
+                    margin-bottom: rem(100);
+                    @media (max-width: 768px) {
+                        max-height: rem(331);
+                        margin-bottom: rem(39);
+                    }
+                }
+            }
+        }
+        .left-side {
+            .btn {
+                margin-top: rem(38);
+            }
+        }
+        .remember_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: rem(11);
+            a {
+                font-size: rem(18);
+                line-height: rem(21);
+            }
+        }
+    }
+    &.verification-page {
+        .right-side {
+            .side_inner_auth {
+                .img-pref {
+                    max-height: rem(534);
+                    width: rem(417);
+                    max-width: 100%;
+                    margin-bottom: rem(125);
+                    @media (max-width: 768px) {
+                        max-height: rem(374);
+                        width: rem(292);
+                        margin-bottom: rem(38);
+                    }
+                }
+            }
+        }
+        .left-side {
+            .title_left_side {
+                margin-bottom: rem(17);
+                @media (max-width: 768px) {
+                    margin-bottom: rem(17);
+                }
+            }
+            .hint_desc {
+                font-size: rem(24);
+                font-weight: $fontRegular;
+                line-height: rem(28);
+                color: $green-0;
+                margin-bottom: rem(23);
+                text-align: center;
+                @media (max-width: 768px) {
+                    font-size: rem(21);
+                    line-height: rem(25);
+                }
+                span {
+                    color: $grey-A6;
+                }
+            }
+            .hint_left_side {
+                font-size: rem(24);
+                line-height: rem(28);
+                font-weight: $fontRegular;
+                color: $grey-6;
+                text-align: center;
+                margin-bottom: rem(89);
+                margin-top: rem(15);
+                @media (max-width: 768px) {
+                    margin-bottom: rem(24);
+                    font-size: rem(21);
+                    line-height: rem(25);
+                }
+                a {
+                    display: block;
+                    line-height: rem(19);
+                    font-weight: $fontBold;
+                    color: $green-0;
+                    margin-top: rem(10);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &.doctor-login-page {
+        .right-side {
+            .side_inner_auth {
+                .img-pref {
+                    max-height: rem(610);
+                    width: rem(493);
+                    max-width: 100%;
+                    margin-bottom: rem(125);
+                    @media (max-width: 768px) {
+                        max-height: rem(393);
+                        width: rem(318);
+                        margin-bottom: rem(38);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,357 @@
+.form-control {
+    &:focus {
+        // box-shadow: 0 0 0 0.2rem rgba($green-0, .25);
+        box-shadow: none;
+    }
+}
+
+textarea {
+    &.form-control {
+        min-height: 100px;
+    }
+}
+
+.form-group,
+.input-group {
+    margin-bottom: rem(20);
+}
+
+.input-group {
+    flex-wrap: nowrap;
+    .input-group-append {
+        .input-group-text {
+            padding: 1rem rem(16);
+            background-color: #f2f2f2;
+            border-radius: 0;
+            border-top-#{$left}-radius: 0;
+            border-top-#{$right}-radius: rem(8);
+            border: none;
+            border-bottom: 1px solid $green-0;
+            font-size: rem(20);
+            font-weight: $fontRegular;
+            line-height: rem(24);
+        }
+    }
+}
+
+.custom-checkbox {
+    .custom-control-label {
+        font-size: rem(18);
+        font-weight: $fontRegular;
+        line-height: rem(21);
+        color: $grey-70;
+        &::after {
+            border-radius: rem(4);
+        }
+        &::before {
+            border-radius: rem(4);
+        }
+        &::before,
+        &::after {
+            height: rem(18);
+            width: rem(18);
+            top: rem(2);
+        }
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: $green-0;
+    }
+}
+
+.number-code-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .code-input {
+        border-radius: rem(8);
+        background-color: $grey-F2;
+        border: 1px solid $grey-F2;
+        color: $green-49;
+        margin-#{$right}: rem(15);
+        font-size: rem(24);
+        font-weight: $fontBold;
+        line-height: rem(29);
+        height: rem(60);
+        width: rem(60);
+        text-align: center;
+        @media (max-width: 768px) {
+            margin-#{$right}: rem(13);
+            height: rem(53);
+            width: rem(53);
+            font-size: rem(21);
+            line-height: rem(25);
+        }
+        &:valid {
+            background-color: $green-E3;
+            border: 1px solid $green-49;
+            color: $green-49;
+        }
+        &:focus {
+            outline: none;
+            border-color: $green-0;
+        }
+        &:last-child {
+            margin-#{$right}: 0;
+        }
+    }
+}
+
+.title_form_group {
+    margin-bottom: rem(24);
+
+    h4 {
+        display: inline-block;
+        color: $green-0;
+        border-bottom: 1px solid $green-B;
+        font-size: rem(20);
+        font-weight: $fontBold;
+        line-height: rem(24);
+        padding-bottom: rem(6);
+        margin-bottom: 0;
+        position: relative;
+        &::after {
+            content: "";
+            bottom: rem(-1.5);
+            height: rem(2);
+            width: rem(27.5);
+            background-color: $green-0;
+            position: absolute;
+            #{$left}: 0;
+        }
+        span {
+            font-size: rem(16);
+            font-weight: $fontRegular;
+            line-height: rem(19);
+            color: $green-42;
+        }
+    }
+}
+
+.custome_radio_group {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20);
+    padding: rem(11) 0;
+    label {
+        font-size: rem(20);
+        font-weight: $fontRegular;
+        line-height: rem(24);
+        color: $grey-6;
+        margin-bottom: 0;
+    }
+    .custom-input-control {
+        margin-#{$left}: rem(42);
+    }
+}
+
+.stepper_form_wizard {
+    .steps {
+        ul {
+            li {
+                position: relative;
+                &:not(:first-child):after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background: #91c9c1;
+                    position: absolute;
+                    left: -50%;
+                    top: rem(40);
+                    z-index: -1;
+                    @media (max-width: 768px) {
+                        top: rem(30);
+                    }
+                }
+                a {
+                    display: flex !important;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: rem(10);
+                    font-size: rem(20);
+                    font-weight: $fontRegular;
+                    line-height: rem(24);
+                    @media (max-width: 768px) {
+                        font-size: rem(15);
+                        line-height: rem(19);
+                    }
+                    &:hover {
+                        padding: rem(10);
+                    }
+                    .number {
+                        border: rem(2) solid #91c9c1;
+                        background-color: $white;
+                        color: #91c9c1;
+                        border-radius: 100%;
+                        padding: rem(9) 0;
+                        padding-bottom: rem(14);
+                        margin: auto;
+                        margin-bottom: rem(28);
+                        align-self: flex-start;
+                        width: rem(60);
+                        height: rem(60);
+                        font-size: rem(32);
+                        line-height: rem(37);
+                        text-align: center;
+                        @media (max-width: 768px) {
+                            width: rem(40);
+                            height: rem(40);
+                            font-size: rem(22);
+                            line-height: rem(20);
+                        }
+                    }
+                }
+                &.disabled {
+                    a {
+                        background: transparent;
+                        color: $green-6A;
+                        &:hover {
+                            color: $green-6A;
+                            background: transparent;
+                        }
+                    }
+                }
+                &.done {
+                    a {
+                        background-color: transparent;
+                        color: $green-0;
+                        .number {
+                            border-color: $green-0;
+                            background-color: $green-0;
+                            color: $white;
+                        }
+                        &:hover,
+                        &.active {
+                            background: transparent;
+                            color: $green-0;
+                            .number {
+                                border-color: $green-0;
+                                background-color: $green-0;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+                &.current {
+                    a {
+                        background-color: transparent;
+                        color: $green-0;
+                        .number {
+                            border-color: $green-0;
+                            background-color: $green-B;
+                            color: $green-0;
+                        }
+                        &:hover,
+                        &.active {
+                            background: transparent;
+                            color: $green-0;
+                            .number {
+                                border-color: $green-0;
+                                background-color: $green-B;
+                                color: $green-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        background-color: transparent;
+        .stepper_title {
+        }
+        .stepper_content {
+            height: auto;
+            float: unset;
+            position: relative;
+            .list_item_info {
+                list-style: none !important;
+                li {
+                    color: #050505;
+                }
+            }
+            input {
+                border: none;
+                border-bottom: 1px solid $green-0;
+            }
+        }
+    }
+    .actions {
+        a {
+            background-color: $green-0;
+            border-radius: rem(6);
+            padding: rem(12) rem(18) !important;
+            font-size: rem(20);
+            line-height: rem(24);
+            font-weight: $fontRegular;
+            &:hover,
+            &.active {
+                background-color: $green-42;
+            }
+        }
+    }
+}
+
+.custom-input-control {
+    position: relative;
+    display: block;
+    min-height: rem(20);
+    padding-#{$left}: rem(30);
+    .custom-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked {
+            & ~ .custom-label-control {
+                &::before {
+                    color: $white;
+                    border-color: $green-0;
+                    background-color: transparent;
+                }
+                &::after {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23004D3D'/%3e%3c/svg%3e");
+                }
+            }
+        }
+    }
+    .custom-label-control {
+        display: inline-block;
+        margin-bottom: 0;
+        position: relative;
+        font-size: rem(20);
+        font-weight: $fontRegular;
+        line-height: rem(29);
+        color: #050505;
+        &::before {
+            position: absolute;
+            top: rem(5);
+            left: rem(-30);
+            display: block;
+            width: rem(20);
+            height: rem(20);
+            pointer-events: none;
+            content: "";
+            background-color: $white;
+            border: rem(2) solid $grey-6;
+        }
+        &::after {
+            position: absolute;
+            top: rem(5);
+            left: rem(-30);
+            display: block;
+            width: rem(20);
+            height: rem(20);
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 75% 75%;
+        }
+    }
+    &.custom-input-radio {
+        .custom-label-control {
+            &::after,
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+}

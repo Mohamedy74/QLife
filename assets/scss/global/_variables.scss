@@ -1,0 +1,123 @@
+$fontPath: "../../fonts";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("#{$fontPath}/Helvetica.ttf") format("truetype");
+}
+
+$white: #ffffff;
+$white-FD: #fdf5e6;
+$grey-3: #333333;
+$grey-6: #666666;
+$grey-9: #999999;
+$black-0: #000000;
+$blue: #4990e1;
+$blue-2D: #2d588a;
+
+$gray-3: #303b4f;
+$gray-2: #252e3e;
+$gray-6: #666d78;
+$gray-F8: #f8f8f9;
+$gray-7C: #7c828b;
+$gray-E9: #e9eaec;
+$gray-F2: #f2f3f5;
+$gray-A8: #a8abb2;
+
+$grey-70: #707070;
+$grey-40: #403e3e;
+$grey-A6: #a6a6a6;
+$grey-F2: #f2f2f2;
+
+$red-F: #f5c1c3;
+$red-FD: #fdf3f3;
+$red-FB: #fbe6e7;
+$red-4C: #4c0c0e;
+
+$green-0: #004d3d;
+$green-42: #429484;
+$green-49: #49b48f;
+$green-6A: #6ab4a9;
+$green-E3: #e3f1f0;
+$green-B: #bbded9;
+$green-2C: #2c675a;
+$green-1E: #1e4c3e;
+$green-3B: #3b8778;
+
+$mainColor: $green-0;
+$secondColor: $green-42;
+
+$fontRegular: 400;
+$fontMedium: 500;
+$fontSemiBold: 600;
+$fontBold: 700;
+
+$imgPath: "../../images";
+$webfontPath: "../../webfonts";
+
+$base-size: 18;
+
+// Return valid calc
+@function add($value1, $value2, $return-calc: true) {
+    @if $value1 == null {
+        @return $value2;
+    }
+
+    @if $value2 == null {
+        @return $value1;
+    }
+
+    @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+        @return $value1 + $value2;
+    }
+
+    @if type-of($value1) != number {
+        $value1: unquote("(") + $value1 + unquote(")");
+    }
+
+    @if type-of($value2) != number {
+        $value2: unquote("(") + $value2 + unquote(")");
+    }
+
+    @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + unquote(" + ") + $value2);
+}
+
+@function rem($target, $context: $base-size) {
+    @return ($target / $base-size) * 1rem;
+}
+
+@function avem($unit, $return: "rem", $base: $base-size) {
+    @if $return == "rem" {
+        @return (($unit) / 1000) + 0rem;
+    } @else {
+        @return (($unit) / 1000) + 0em;
+    }
+}
+
+$default-behaviour: true; //  true or false
+
+// scss-docs-start form-floating-variables
+$input-height-border: 1px * 2 !default;
+$form-floating-height: add(3.5rem, $input-height-border) !default;
+$form-floating-line-height: 1.25 !default;
+$form-floating-padding-x: rem(16) !default;
+$form-floating-padding-y: 1rem !default;
+$form-floating-input-padding-t: 1.625rem !default;
+$form-floating-input-padding-b: 0.625rem !default;
+$form-floating-label-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !default;
+$form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out !default;
+// scss-docs-end form-floating-variables
+
+//== font-families
+//
+// font family
+$font-family-default: "Helvetica", sans-serif;
+$font-numbers-default: "Helvetica", sans-serif;
+$fonts-map-default: ();
+// font family
+$font-family-reverse: "Cairo", sans-serif;
+$font-numbers-reverse: "Cairo", sans-serif;
+$fonts-map-reverse: ();

@@ -1,0 +1,37 @@
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    border-color: $green-B;
+    margin-bottom: rem(20);
+    .nav-item {
+        flex: 1;
+        @media (max-width: 768px) {
+            flex: 1 1 auto;
+        }
+        .nav-link {
+            text-align: center;
+            font-size: rem(20);
+            font-weight: $fontRegular;
+            line-height: rem(24);
+            letter-spacing: avem(12.9);
+            color: rgba($black-0, 0.58);
+            padding-top: rem(14);
+            padding-bottom: rem(20);
+            border-radius: rem(8) rem(8) 0 0;
+            border: none;
+            @media (max-width: 768px) {
+                font-size: rem(14);
+                line-height: rem(16);
+                padding: 0 rem(9);
+                padding-top: rem(17);
+                padding-bottom: rem(15);
+            }
+            &.active {
+                color: $green-0;
+                font-weight: $fontBold;
+                background-color: $green-E3;
+                border-bottom: 2px solid $green-0;
+            }
+        }
+    }
+}

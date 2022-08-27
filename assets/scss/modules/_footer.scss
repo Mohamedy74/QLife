@@ -1,0 +1,65 @@
+.app-footer {
+    background-color: $green-0;
+    padding: rem(18) 0;
+
+    .footer_inner {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        h4 {
+            font-size: rem(18);
+            font-weight: $fontBold;
+            color: $white-FD;
+            line-height: rem(21);
+            margin-bottom: rem(4);
+            @media (max-width: 768px) {
+                font-size: rem(11);
+                line-height: rem(14);
+                margin-bottom: rem(2);
+            }
+        }
+
+        p {
+            font-size: rem(16);
+            font-weight: $fontRegular;
+            color: $white-FD;
+            line-height: rem(18);
+            margin-bottom: rem(11);
+            @media (max-width: 768px) {
+                font-size: rem(10);
+                line-height: rem(12);
+                margin-bottom: rem(6);
+            }
+        }
+
+        .copy_right {
+            margin-top: rem(21);
+            margin-bottom: 0;
+            line-height: rem(15);
+            font-size: rem(13);
+            @media (max-width: 768px) {
+                font-size: rem(8);
+                line-height: rem(10);
+                margin-top: rem(6);
+            }
+        }
+
+        .company_brief {
+            border-#{$right}: 1px solid $white-FD;
+            padding-#{$right}: rem(20);
+            .footer_logo {
+                width: rem(165);
+                max-width: 100%;
+                height: rem(126);
+                @media (max-width: 768px) {
+                    width: rem(84);
+                    height: rem(66);
+                }
+            }
+        }
+
+        .quick_links {
+            padding-#{$left}: rem(13.5);
+        }
+    }
+}

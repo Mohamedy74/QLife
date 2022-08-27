@@ -1,0 +1,27 @@
+@import "./global/variables";
+@import "./global/directionVariablesConfig";
+
+// Vendors
+@import "./Vendors/dynamicBootstrap4/bootsrtap";
+@import "Vendors/all.min";
+@import "Vendors/select2.min";
+
+// components
+@import "./modules/animations";
+@import "./components/button";
+@import "./components/card";
+@import "./components/text";
+@import "./components/forms";
+@import "./components/tab";
+@import "./components/table";
+@import "./components/section";
+@import "./components/modal";
+@import "./components/breadcrumb";
+@import "./components/select2";
+@import "./components/floating-labels";
+@import "./components/auth";
+
+// modules
+@import "./modules/common";
+@import "./modules/header";
+@import "./modules/footer";

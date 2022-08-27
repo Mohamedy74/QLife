@@ -1,0 +1,115 @@
+.btn {
+    border-radius: rem(6);
+    padding: rem(13) rem(16);
+    font-size: rem(20);
+    font-weight: $fontRegular;
+    line-height: rem(23);
+
+    &.btn-theme {
+        color: $white;
+        background-color: $green-0;
+
+        &:hover {
+            background-color: $green-42;
+        }
+    }
+
+    &.btn-outline-theme {
+        color: $green-0;
+        background-color: transparent;
+        border: 1px solid $green-0;
+
+        &:hover {
+            color: $white;
+            background-color: $green-42;
+            svg {
+                fill: $white;
+            }
+        }
+    }
+
+    &.btn-second {
+        color: $green-0;
+        background-color: $red-FB;
+
+        &:hover {
+            color: $white;
+            background-color: $green-42;
+        }
+    }
+
+    &.btn_white {
+        color: $green-0;
+        background-color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $green-0;
+        }
+    }
+
+    &.btn-lang {
+        color: $white;
+        font-size: rem(18);
+        font-weight: $fontSemiBold;
+
+        &:hover {
+            background-color: $green-42;
+        }
+    }
+
+    &.btn_link {
+        color: $green-0;
+
+        svg {
+            fill: $green-0;
+            margin-#{$left}: rem(8);
+        }
+
+        &:hover {
+            color: $green-42;
+
+            svg {
+                fill: $green-42;
+            }
+        }
+    }
+
+    &.btn_icon {
+        padding: rem(12);
+        border-radius: rem(10);
+
+        &.theme {
+            &:hover {
+                background-color: $red-FD;
+            }
+        }
+
+        &.grey {
+            &:hover {
+                background-color: $gray-F8;
+            }
+        }
+
+        img {
+            height: rem(16);
+            width: rem(16);
+        }
+    }
+
+    &.btn_with_icon {
+        padding: rem(10) rem(13);
+        border: 2px solid $green-1E;
+        color: $gray-2;
+        font-size: rem(18);
+        font-weight: $fontRegular;
+        line-height: rem(21);
+        background-color: rgba($green-2C, 0.2);
+
+        img {
+            width: rem(24);
+            height: rem(24);
+            margin-#{$right}: rem(12);
+        }
+    }
+}

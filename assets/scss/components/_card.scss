@@ -1,0 +1,692 @@
+.card_join_login {
+    margin-bottom: rem(53);
+    background-color: $white;
+    box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+    border-radius: rem(9);
+    padding: rem(42) 0;
+    .card_join_header {
+        margin: 0 rem(72);
+        border-bottom: 1px solid $green-42;
+        margin-bottom: rem(19);
+        @media (max-width: 768px) {
+            margin: 0 rem(50);
+            margin-bottom: rem(13);
+        }
+        h4 {
+            font-size: rem(23);
+            font-weight: $fontBold;
+            line-height: rem(27);
+            margin-bottom: rem(19);
+            color: $green-0;
+            text-align: center;
+            @media (max-width: 768px) {
+                font-size: rem(18);
+                line-height: rem(21);
+            }
+        }
+    }
+    .card_join_body {
+        margin: 0 rem(72);
+        margin-bottom: rem(34);
+        @media (max-width: 768px) {
+            margin: 0 rem(50);
+            margin-bottom: rem(26);
+        }
+        img {
+            border-radius: rem(10);
+            height: rem(334);
+            max-width: 100%;
+            @media (max-width: 768px) {
+                height: auto;
+            }
+        }
+    }
+    .card_join_footer {
+        margin: 0 rem(22);
+        margin-bottom: rem(5);
+        .btn {
+            width: 100%;
+            font-size: rem(18);
+            font-weight: $fontBold;
+            line-height: rem(21);
+            border-radius: rem(7);
+        }
+    }
+}
+
+.card_food_preferences {
+    margin-bottom: rem(16);
+    display: block !important;
+    max-width: 100%;
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 992px) {
+        width: rem(222);
+    }
+
+    .card__input {
+        position: absolute;
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        &:checked {
+            & ~ .card__body {
+                .card__body-cover-checkbox {
+                    border-color: $green-0;
+                    background-color: $green-0;
+                    .card__body-cover-checkbox--svg {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .card__body {
+        background-color: $white;
+        border-radius: rem(5);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding: rem(17) rem(8);
+        .card__body-cover {
+            overflow: hidden;
+            margin-bottom: rem(5);
+            .card__body-cover-image {
+                width: rem(66);
+                height: rem(66);
+                margin: auto;
+                display: block;
+                max-width: 100%;
+            }
+            .card__body-cover-checkbox {
+                border: rem(2) solid $grey-6;
+                position: absolute;
+                #{$left}: rem(8);
+                top: rem(8);
+                z-index: 1;
+                width: rem(18);
+                height: rem(18);
+                border-radius: rem(5);
+                transition: transform 0.15s, opacity calc(0.15s * 1.2) linear;
+                .card__body-cover-checkbox--svg {
+                    width: 13px;
+                    height: 11px;
+                    display: none;
+                    vertical-align: top;
+                    fill: none;
+                    margin: 0 0 0 0;
+                    stroke: $white;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-dasharray: 16px;
+                    stroke-dashoffset: 0 16px;
+                    transition: stroke-dashoffset 0.4s ease 0.15s;
+                }
+            }
+        }
+        .card__body-header {
+            h2 {
+                font-size: rem(20);
+                font-weight: $fontRegular;
+                line-height: rem(24);
+                margin-bottom: 0;
+                color: $grey-6;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.card_plan {
+    display: block;
+    height: 100%;
+    .card__input {
+        position: absolute;
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        &:checked {
+            & ~ .card__body {
+                border-color: $green-0;
+            }
+        }
+    }
+    .card__body {
+        border: 1px solid transparent;
+        background-color: $white;
+        border-radius: rem(9);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding: rem(11) rem(15);
+        height: 100%;
+        .card__body-header {
+            .card__body-header-title {
+                font-size: rem(23);
+                font-weight: $fontRegular;
+                line-height: rem(27);
+                margin-bottom: rem(5);
+                color: #050505;
+                white-space: nowrap;
+            }
+            .card__body-header-subtitle {
+                font-size: rem(18);
+                font-weight: $fontRegular;
+                line-height: rem(21);
+                margin-bottom: 0;
+                color: $grey-6;
+            }
+        }
+        .card__body-content {
+            display: flex;
+            justify-content: center;
+            margin-bottom: rem(37);
+            @media (max-width: 768px) {
+                margin-bottom: rem(23);
+                margin-top: rem(11);
+            }
+            .symbol {
+                font-size: rem(20);
+                font-weight: $fontRegular;
+                line-height: rem(24);
+                color: $green-2C;
+                text-transform: uppercase;
+                white-space: nowrap;
+                align-self: flex-start;
+            }
+            .price {
+                font-size: rem(63);
+                font-weight: $fontRegular;
+                line-height: rem(74);
+                color: $green-2C;
+                white-space: nowrap;
+                align-self: center;
+                margin-#{$right}: rem(4);
+                margin-#{$left}: rem(7);
+            }
+            .subscription {
+                font-size: rem(19);
+                font-weight: $fontRegular;
+                line-height: rem(22);
+                color: $green-2C;
+                white-space: nowrap;
+                align-self: flex-end;
+            }
+        }
+        .card__body-footer {
+            text-align: $right;
+            .btn {
+                background-color: rgba($green-2C, 0.2);
+                &:hover {
+                    background-color: $green-42;
+                }
+            }
+        }
+    }
+}
+
+.card_renewable {
+    display: block;
+    height: 100%;
+    .card__input {
+        position: absolute;
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        &:checked {
+            & ~ .card__body {
+                border-color: $green-0;
+            }
+        }
+    }
+    .card__body {
+        border: 1px solid transparent;
+        background-color: $white;
+        border-radius: rem(9);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding: rem(11) rem(15);
+        height: 100%;
+        .card__body-header {
+            .card__body-header-title {
+                font-size: rem(20);
+                font-weight: $fontRegular;
+                line-height: rem(24);
+                margin-bottom: rem(18);
+                color: #050505;
+            }
+        }
+        .card__body-content {
+            font-size: rem(33);
+            font-weight: $fontRegular;
+            line-height: rem(38);
+            color: $green-0;
+            margin-bottom: rem(62);
+        }
+        .card__body-footer {
+            text-align: $right;
+            margin-bottom: rem(3);
+        }
+    }
+}
+
+.card_payment_method {
+    border-radius: rem(9);
+    background-color: $white;
+    padding: rem(11) rem(12);
+    box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+    margin-bottom: rem(23);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .card_inner {
+        display: flex;
+        align-items: center;
+        .card_thumbnail {
+            height: rem(36);
+            width: rem(36);
+            margin-#{$right}: rem(12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .card_content {
+            h5 {
+                font-size: rem(12);
+                font-weight: $fontRegular;
+                line-height: rem(14);
+                margin-bottom: rem(5);
+                color: $green-42;
+            }
+            p {
+                font-size: rem(20);
+                font-weight: $fontRegular;
+                line-height: rem(24);
+                margin-bottom: rem(9);
+                color: $green-0;
+            }
+        }
+    }
+    .card_actions {
+        .dropdown {
+            > a {
+                height: rem(24);
+                width: rem(24);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    z-index: 9999;
+                }
+            }
+            .dropdown-menu {
+                padding-top: rem(27);
+                padding-bottom: rem(5);
+                border-radius: rem(4);
+                box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+                border: none;
+                min-width: rem(56);
+                #{$left}: rem(24) !important;
+                .dropdown-item {
+                    padding: rem(3) rem(8);
+                    font-size: rem(12);
+                    font-weight: $fontRegular;
+                    line-height: rem(14);
+                    color: $green-42;
+                }
+            }
+        }
+    }
+}
+
+.card_add_new {
+    border: 1px dashed $green-0;
+    padding: rem(24) 0;
+    border-radius: rem(9);
+    margin-bottom: rem(23);
+    cursor: pointer;
+    .card_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: rem(24);
+            width: rem(24);
+            max-width: 100%;
+            margin-#{$right}: rem(9.5);
+        }
+        h5 {
+            font-size: rem(18);
+            font-weight: $fontRegular;
+            line-height: rem(21);
+            color: $green-0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.card_case {
+    display: block;
+    box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+    background-color: $white;
+    border-radius: rem(9);
+    padding: rem(18) rem(16);
+    margin-bottom: rem(25);
+    .card_thumbnail {
+        height: rem(79);
+        width: rem(79);
+        max-width: 100%;
+        border-radius: 100%;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: rem(11);
+        margin-top: rem(6);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .card_title {
+        margin-bottom: rem(17);
+        h4 {
+            font-size: rem(20);
+            font-weight: $fontRegular;
+            line-height: rem(24);
+            color: $green-0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+    .list_info {
+        padding: 0;
+        margin: 0;
+        li {
+            font-size: rem(20);
+            font-weight: $fontRegular;
+            line-height: rem(24);
+            color: $grey-70;
+            margin-bottom: rem(5);
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                margin-#{$right}: rem(7);
+                height: rem(24);
+                width: rem(24);
+            }
+        }
+    }
+}
+
+.card_accordion {
+    margin-bottom: rem(17);
+
+    .head_card {
+        h2 {
+            font-size: rem(20);
+            font-weight: $fontBold;
+            line-height: rem(24);
+            color: $green-0;
+            margin-bottom: 0;
+            border-bottom: 1px solid $green-B;
+            position: relative;
+            &::after {
+                content: "";
+                bottom: rem(-1.5);
+                height: rem(2);
+                width: rem(27.5);
+                background-color: $green-0;
+                position: absolute;
+                #{$left}: 0;
+            }
+            a {
+                color: $green-0;
+                padding: rem(6) 0;
+                display: block;
+                position: relative;
+                padding-#{$right}: rem(56);
+
+                &::after {
+                    content: url("#{$imgPath}/icons/arrow-down.svg");
+                    position: absolute;
+                    #{$right}: 0;
+                    height: rem(24);
+                    width: rem(24);
+                }
+
+                &:not(.collapsed) {
+                    &::after {
+                        content: url("#{$imgPath}/icons/expand_more.svg");
+                    }
+                }
+            }
+        }
+    }
+
+    .content_card {
+        padding: rem(18) 0;
+        position: relative;
+    }
+}
+
+.card_plan_steeper {
+    display: block !important;
+    height: 100%;
+    .card__input {
+        position: absolute;
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        &:checked {
+            & ~ .card__body {
+                border-color: $green-0;
+                background-color: $white-FD;
+                .card__body-cover-checkbox {
+                    border-color: $green-0;
+                    .card__body-cover-checkbox-span {
+                        display: inline-block;
+                        background-color: $green-0;
+                    }
+                }
+            }
+        }
+    }
+    .card__body {
+        border: 1px solid transparent;
+        background-color: $white;
+        border-radius: rem(5);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding: rem(35) rem(60) rem(50) rem(60);
+        height: 100%;
+        .card__body-cover-checkbox {
+            border: rem(2) solid $grey-6;
+            position: absolute;
+            #{$left}: rem(8);
+            top: rem(8);
+            z-index: 1;
+            width: rem(20);
+            height: rem(20);
+            border-radius: 50%;
+            transition: transform 0.15s, opacity calc(0.15s * 1.2) linear;
+            .card__body-cover-checkbox-span {
+                width: rem(11.5);
+                height: rem(11.5);
+                display: none;
+                background-color: $white;
+                margin: rem(1.5) rem(2);
+                vertical-align: top;
+                transition: stroke-dashoffset 0.4s ease 0.15s;
+                border-radius: 50%;
+            }
+        }
+        .card__body-header {
+            margin-bottom: rem(20);
+            .card__body-header-title {
+                font-size: rem(20);
+                font-weight: $fontRegular;
+                line-height: rem(24);
+                margin-bottom: rem(4);
+                color: $green-0;
+                white-space: nowrap;
+            }
+            .card__body-header-subtitle {
+                font-size: rem(16);
+                font-weight: $fontRegular;
+                line-height: rem(19);
+                margin-bottom: 0;
+                color: $green-42;
+            }
+        }
+        .card__body-content {
+            display: flex;
+            justify-content: flex-end;
+            .symbol {
+                font-size: rem(16);
+                font-weight: $fontRegular;
+                line-height: rem(19);
+                color: $green-42;
+                text-transform: uppercase;
+                white-space: nowrap;
+                align-self: flex-start;
+            }
+            .price {
+                font-size: rem(51);
+                font-weight: $fontRegular;
+                line-height: rem(59);
+                color: $green-0;
+                white-space: nowrap;
+                align-self: center;
+                margin-#{$right}: rem(4);
+                margin-#{$left}: rem(7);
+            }
+            .subscription {
+                font-size: rem(16);
+                font-weight: $fontRegular;
+                line-height: rem(19);
+                color: $green-42;
+                white-space: nowrap;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+.card_payment_options {
+    display: block !important;
+    height: 100%;
+    .card__input {
+        position: absolute;
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        &:checked {
+            & ~ .card__body {
+                border-color: $green-0;
+                .card__body-content {
+                    display: block;
+                }
+                .card__body-cover-checkbox {
+                    border-color: $green-0;
+                    .card__body-cover-checkbox-span {
+                        display: inline-block;
+                        background-color: $green-0;
+                    }
+                }
+            }
+        }
+    }
+    .card__body {
+        border: 1px solid transparent;
+        background-color: $white;
+        border-radius: rem(8);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: rem(0) rem(3) rem(6) rgba($black-0, 0.16);
+        transition: transform 0.15s, box-shadow 0.15s;
+        padding: rem(7) rem(13);
+        height: 100%;
+        .card__body-cover-checkbox {
+            border: rem(2) solid $grey-6;
+            position: absolute;
+            #{$left}: rem(8);
+            top: rem(12);
+            z-index: 1;
+            width: rem(20);
+            height: rem(20);
+            border-radius: 50%;
+            transition: transform 0.15s, opacity calc(0.15s * 1.2) linear;
+            .card__body-cover-checkbox-span {
+                width: rem(11.5);
+                height: rem(11.5);
+                display: none;
+                background-color: $white;
+                margin: rem(1.5) rem(2);
+                vertical-align: top;
+                transition: stroke-dashoffset 0.4s ease 0.15s;
+                border-radius: 50%;
+            }
+        }
+        .card__body-header {
+            margin-bottom: rem(5);
+            padding-#{$left}: rem(31);
+            display: flex;
+            align-items: center;
+            img {
+                width: rem(29);
+                height: rem(29);
+                padding-#{$right}: rem(8);
+            }
+            h4 {
+                font-size: rem(24);
+                font-weight: $fontRegular;
+                line-height: rem(28);
+                margin-bottom: 0;
+                color: #050505;
+                white-space: nowrap;
+            }
+        }
+        .card__body-content {
+            display: none;
+            margin-top: rem(10);
+        }
+    }
+}
