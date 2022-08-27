@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo/favicon.ico">
+    <title>Home | QLife</title>
+    <link rel="stylesheet" href="assets/css/en/style.css">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="app-header">
+        <nav class="navbar navbar-expand-md navbar-light" id="foxapp_menu">
+            <div class="container">
+                <div>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo/logo.png" class="img-fluid" alt="">
+                        <span>Doctors</span>
+                    </a>
+                </div>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            En
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                English
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                العربية
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav border-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Q-LIFE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start section -->
+    <section class="section_find_cases mt-4">
+        <div class="container">
+            <div class="page_filter">
+                <div class="filter_inner">
+                    <div class="filter_inputs_group">
+                        <div class="form-floating form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                            <label>Name</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
+                            <label>Phone Number</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" />
+                            <label>Email </label>
+                        </div>
+                    </div>
+                    <div class="filter_search">
+                        <button class="btn btn-theme">
+                            <img src="assets/images/icons/search.svg" alt="">
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <nav class="navbar head-nav">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a>
+                                <img src="assets/images/icons/home.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Mohamed ali
+                        </li>
+                    </ol>
+                </nav>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile-case-health-history.html">
+                            Case Health History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sessions-history.html">
+                            Session history
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex justify-content-end">
+                    <a data-toggle="modal" data-target="#AddSessionModalCenter" class="btn btn-outline-theme mb-3">
+                        <svg id="add_black_24dp_2_" data-name="add_black_24dp (2)" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_4017" data-name="Path 4017" d="M0,0H24V24H0Z" fill="none" />
+                            <path id="Path_4018" data-name="Path 4018" d="M19,13H13v6H11V13H5V11h6V5h2v6h6Z" fill="" />
+                        </svg>
+
+                        Add New Session
+                    </a>
+                </div>
+
+                <div class="case_details">
+                    <div class="table-responsive">
+                        <table class="table table_primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Responsible doctor</th>
+                                    <th scope="col">Specialization</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Session Notes</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Abdallah Mohamed
+                                    </td>
+                                    <td>Nutrition</td>
+                                    <td>12/03/2022</td>
+                                    <td>followed the instructions and Lose 2kg, take (Bupropion-naltrexone)</td>
+                                    <td>
+                                        <div class="btn-actions">
+                                            <a data-toggle="modal" data-target="#deleteSessionModal" class="btn">
+                                                <img src="assets/images/icons/delete.svg" alt="">
+                                            </a>
+                                            <a data-toggle="modal" data-target="#editSessionModalCenter" class="btn">
+                                                <img src="assets/images/icons/edit.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Abdallah Mohamed
+                                    </td>
+                                    <td>Nutrition</td>
+                                    <td>12/03/2022</td>
+                                    <td>followed the instructions and Lose 2kg, take (Bupropion-naltrexone)</td>
+                                    <td>
+                                        <div class="btn-actions">
+                                            <a data-toggle="modal" data-target="#deleteSessionNoPermissionModal"
+                                                class="btn">
+                                                <img src="assets/images/icons/delete.svg" alt="">
+                                            </a>
+                                            <a data-toggle="modal" data-target="#editSessionModalCenter" class="btn">
+                                                <img src="assets/images/icons/edit.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End section -->
+
+
+    <!-- Start Footer -->
+    <div class="app-footer">
+        <div class="footer_inner">
+            <div class="company_brief">
+                <img src="assets/images/logo/logo-white.png" alt="" class="footer_logo">
+            </div>
+            <div class="quick_links">
+                <h4>
+                    Contact Us
+                </h4>
+                <p>
+                    For any queries please email us at
+                </p>
+                <p>
+                    team@qlife.net
+                </p>
+                <p class="copy_right">
+                    Copyright © 2022 Q-life
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <div class="modal fade" id="AddSessionModalCenter" tabindex="-1" aria-labelledby="AddSessionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddSessionModalCenterTitle">
+                        Add New Session
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg id="close_black_24dp_1_" data-name="close_black_24dp (1)"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_4153" data-name="Path 4153" d="M0,0H24V24H0Z" fill="none" />
+                            <path id="Path_4154" data-name="Path 4154"
+                                d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
+                                fill="#004d3d" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-floating form-group">
+                            <input type="text" class="form-control" placeholder="Responsible Doctor">
+                            <label>Responsible Doctor</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <select class="form-control" placeholder=" ">
+                                <option selected>Open this select menu</option>
+                                <option value="1">Sleeve Gastrectomy</option>
+                                <option value="2">Sleeve Gastrectomy</option>
+                                <option value="3">Sleeve Gastrectomy</option>
+                                <option value="4">Sleeve Gastrectomy</option>
+                                <option value="5">Sleeve Gastrectomy</option>
+                            </select>
+                            <label>Specialization</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <input type="date" class="form-control" placeholder="Date">
+                            <label>Date</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <textarea name="" cols="30" rows="10" class="form-control" placeholder=" "></textarea>
+                            <label>Session Notes</label>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a class="btn" data-dismiss="modal">
+                                Cancel
+                            </a>
+                            <button type="button" class="btn btn-theme ml-2">
+                                Add
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editSessionModalCenter" tabindex="-1" aria-labelledby="editSessionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editSessionModalCenterTitle">
+                        Edit Session
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg id="close_black_24dp_1_" data-name="close_black_24dp (1)"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_4153" data-name="Path 4153" d="M0,0H24V24H0Z" fill="none" />
+                            <path id="Path_4154" data-name="Path 4154"
+                                d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
+                                fill="#004d3d" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-floating form-group">
+                            <input type="text" class="form-control" placeholder="Responsible Doctor">
+                            <label>Responsible Doctor</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <select class="form-control" placeholder=" ">
+                                <option selected>Open this select menu</option>
+                                <option value="1">Sleeve Gastrectomy</option>
+                                <option value="2">Sleeve Gastrectomy</option>
+                                <option value="3">Sleeve Gastrectomy</option>
+                                <option value="4">Sleeve Gastrectomy</option>
+                                <option value="5">Sleeve Gastrectomy</option>
+                            </select>
+                            <label>Specialization</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <input type="date" class="form-control" placeholder="Date">
+                            <label>Date</label>
+                        </div>
+                        <div class="form-floating form-group">
+                            <textarea name="" cols="30" rows="10" class="form-control" placeholder=" "></textarea>
+                            <label>Session Notes</label>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a class="btn" data-dismiss="modal">
+                                Cancel
+                            </a>
+                            <button type="button" class="btn btn-theme ml-2">
+                                Edit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteSessionModal" tabindex="-1" aria-labelledby="deleteSessionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteSessionModalTitle">
+                        Delete Session Data
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg id="close_black_24dp_1_" data-name="close_black_24dp (1)"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_4153" data-name="Path 4153" d="M0,0H24V24H0Z" fill="none" />
+                            <path id="Path_4154" data-name="Path 4154"
+                                d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
+                                fill="#004d3d" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <p>
+                            Are You Sure You Want To Delete This Session Data
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <a class="btn" data-dismiss="modal">
+                                Cancel
+                            </a>
+                            <button type="button" class="btn btn-danger ml-2">
+                                Delete
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteSessionNoPermissionModal" tabindex="-1"
+        aria-labelledby="deleteSessionNoPermissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteSessionNoPermissionModalTitle">
+                        Delete Session Data
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg id="close_black_24dp_1_" data-name="close_black_24dp (1)"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_4153" data-name="Path 4153" d="M0,0H24V24H0Z" fill="none" />
+                            <path id="Path_4154" data-name="Path 4154"
+                                d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
+                                fill="#004d3d" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <p>
+                            Sorry, You Have No Permission To Delete Session For Another Doctors
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="assets/js/libs/bootstrap-4.1.3.min.js"></script>
+    <script src="assets/js/libs/select2.min.js"></script>
+    <script src="assets/js/general/common.js"></script>
+</body>
+
+</html>
