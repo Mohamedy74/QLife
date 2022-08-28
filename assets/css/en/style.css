@@ -18355,7 +18355,7 @@ textarea.form-control {
 }
 
 .page_filter {
-  min-height: 18.05556rem;
+  min-height: 100vh;
 }
 
 .page_filter .filter_inner {
