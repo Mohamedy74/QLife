@@ -94,6 +94,12 @@ $(function () {
             input.attr("type", "password");
         }
     });
+    $("[data-upload]").on('change', function (e) {
+        var file = e.target.files[0];
+        var fileName = file.name.split('.').shift();
+        $($(this).attr("data-upload")).css({ 'display': 'flex' });
+        $($(this).attr("data-upload")).find('.file_title h5').text(fileName);
+    });
 
     if ($("#stepper-wizard").length) {
         $("#stepper-wizard").steps({

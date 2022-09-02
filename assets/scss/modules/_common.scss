@@ -224,6 +224,15 @@ button:focus {
   }
 }
 
+@keyframes grow0 {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .container_uploader_file {
   display: flex;
   align-items: center;
@@ -242,6 +251,7 @@ button:focus {
     align-items: center;
     justify-content: space-between;
     margin-bottom: rem(5);
+    display: none;
     @media (max-width: 768px) {
       margin-#{$left}: 0;
       flex-wrap: wrap;
@@ -286,6 +296,7 @@ button:focus {
         height: rem(12);
         .progress-bar {
           background-color: $green-49;
+          animation: grow0 1s forwards;
         }
       }
       .progress_title {
@@ -296,6 +307,8 @@ button:focus {
       }
     }
     .file_action {
+      border: none;
+      background: none;
       @media (max-width: 414px) {
         order: 2;
       }

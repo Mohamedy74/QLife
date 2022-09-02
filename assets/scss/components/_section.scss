@@ -30,7 +30,7 @@
         .item-slide {
             padding-top: rem(141);
             padding-bottom: rem(165);
-            @media (max-width: 1366px) {
+            @media (max-width: 768px) {
                 padding-top: rem(79);
                 padding-bottom: rem(87);
             }
@@ -61,6 +61,12 @@
                     line-height: rem(32);
                 }
             }
+            .slide_actions {
+                @media (max-width: 768px) {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
         }
     }
     .features_boxes {
@@ -68,6 +74,9 @@
         bottom: rem(65);
         margin-bottom: rem(-65);
         z-index: 1;
+        @media (max-width: 768px) {
+            bottom: rem(39);
+        }
         .container {
             border-bottom: 1px solid $green-0;
         }
@@ -109,6 +118,11 @@
                     padding-#{$right}: 0;
                     padding-#{$left}: 0;
                     flex: 1 1 100%;
+                    margin-#{$right}: rem(70);
+                    margin-#{$left}: rem(70);
+                    /* width: 60%;
+                    margin-#{$right}: auto;
+                    margin-#{$left}: auto; */
                 }
                 .item_features_box_inner {
                     border-radius: rem(9);
@@ -153,6 +167,10 @@
     }
     .section_head {
         margin-bottom: rem(24);
+        margin-top: rem(65);
+        @media (max-width: 768px) {
+            margin-top: rem(49);
+        }
         h4 {
             font-size: rem(57);
             line-height: rem(67);
@@ -177,6 +195,10 @@
                 flex-wrap: wrap;
 
                 .item_features_box {
+                    @media (max-width: 768px) {
+                        flex: 1 1 50%;
+                        width: 50%;
+                    }
                     .item_features_box_inner {
                         margin-bottom: rem(35);
                         .feature_thumbnail {
@@ -190,24 +212,44 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            @media (max-width: 768px) {
+                                height: rem(133);
+                                width: rem(133);
+                            }
                             img {
                                 width: auto;
                                 max-width: 100%;
-                                &:nth-child(1) {
+                                &:first-child {
                                     width: rem(89);
                                     height: rem(89);
+                                    @media (max-width: 768px) {
+                                        width: rem(65);
+                                        height: rem(65);
+                                    }
                                 }
                                 &:nth-child(2) {
                                     width: rem(111);
                                     height: rem(116);
+                                    @media (max-width: 768px) {
+                                        width: rem(65);
+                                        height: rem(65);
+                                    }
                                 }
                                 &:nth-child(3) {
                                     width: rem(95);
                                     height: rem(96);
+                                    @media (max-width: 768px) {
+                                        width: rem(70);
+                                        height: rem(70);
+                                    }
                                 }
                                 &:nth-child(4) {
                                     width: rem(94);
                                     height: rem(94);
+                                    @media (max-width: 768px) {
+                                        width: rem(70);
+                                        height: rem(70);
+                                    }
                                 }
                             }
                         }
@@ -220,6 +262,10 @@
                                 line-height: rem(28);
                                 margin-bottom: 0;
                                 text-align: center;
+                                @media (max-width: 768px) {
+                                    font-size: rem(17);
+                                    line-height: rem(20);
+                                }
                             }
                         }
                     }

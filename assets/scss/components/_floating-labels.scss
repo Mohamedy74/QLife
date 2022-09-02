@@ -61,8 +61,8 @@
   > .form-select {
     ~ label {
       transform: $form-floating-label-transform;
-      font-size: rem(10);
-      line-height: rem(12);
+      font-size: rem(18);
+      line-height: rem(20);
       color: $green-0;
     }
   }
@@ -70,8 +70,8 @@
   > .form-control:-webkit-autofill {
     ~ label {
       transform: $form-floating-label-transform;
-      font-size: rem(10);
-      line-height: rem(12);
+      font-size: rem(18);
+      line-height: rem(20);
       color: $green-0;
     }
   }

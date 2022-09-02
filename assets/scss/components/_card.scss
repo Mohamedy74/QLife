@@ -624,11 +624,7 @@
                     display: block;
                 }
                 .card__body-cover-checkbox {
-                    border-color: $green-0;
-                    .card__body-cover-checkbox-span {
-                        display: inline-block;
-                        background-color: $green-0;
-                    }
+                    background-image: url(#{$imgPath}/icons/Path-4207.svg);
                 }
             }
         }
@@ -645,7 +641,6 @@
         padding: rem(7) rem(13);
         height: 100%;
         .card__body-cover-checkbox {
-            border: rem(2) solid $grey-6;
             position: absolute;
             #{$left}: rem(8);
             top: rem(12);
@@ -653,17 +648,11 @@
             width: rem(20);
             height: rem(20);
             border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
             transition: transform 0.15s, opacity calc(0.15s * 1.2) linear;
-            .card__body-cover-checkbox-span {
-                width: rem(11.5);
-                height: rem(11.5);
-                display: none;
-                background-color: $white;
-                margin: rem(1.5) rem(2);
-                vertical-align: top;
-                transition: stroke-dashoffset 0.4s ease 0.15s;
-                border-radius: 50%;
-            }
+            background-image: url(#{$imgPath}/icons/Path-4209.svg);
         }
         .card__body-header {
             margin-bottom: rem(5);
@@ -671,9 +660,9 @@
             display: flex;
             align-items: center;
             img {
-                width: rem(29);
-                height: rem(29);
-                padding-#{$right}: rem(8);
+                width: rem(30);
+                height: rem(30);
+                margin-#{$right}: rem(8);
             }
             h4 {
                 font-size: rem(24);
