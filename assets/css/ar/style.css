@@ -19338,6 +19338,12 @@ button:focus {
   min-height: 25.83333rem;
 }
 
+@media (max-width: 768px) {
+  .form_inner {
+    min-height: 60vh;
+  }
+}
+
 .user_info_avatar {
   position: relative;
   width: 9.05556rem;
